@@ -9,6 +9,7 @@ import {
   InstagramIcon,
   GithubIcon,
 } from "lucide-react";
+import Link from "next/link";
 export default function NavBar() {
   const sideMenuRef = useRef<HTMLUListElement | null>(null);
   const openMenu = () => {
@@ -27,23 +28,22 @@ export default function NavBar() {
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
           {/* Logo/Brand */}
           <div className="flex items-center gap-2">
-            <RocketIcon className="h-8 w-8 text-indigo-600" />
-            <span className="text-xl font-bold text-indigo-600">
-              Creatify365
-            </span>
+            <Link href={"/"}>
+              <RocketIcon className="h-8 w-8 text-indigo-600" />
+              <span className="text-xl font-bold text-indigo-600">
+                Creatify365
+              </span>
+            </Link>
           </div>
           <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3">
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
-              <a href="/services">What We Do</a>
+              <Link href="/services">What We Do</Link>
             </li>
-            {/* <li>
-              <a href="#about">What we do</a>
-            </li> */}
             <li>
-              <a href="/contact-us">Contacts </a>
+              <Link href="/contact-us">Contacts </Link>
             </li>
           </ul>
           <div
@@ -76,40 +76,31 @@ export default function NavBar() {
 
             {/* Navigation links */}
             <li>
-              <a
+              <Link
                 href="/about"
                 onClick={closeMenu}
                 className="block py-3 text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
               >
                 About
-              </a>
+              </Link>
             </li>
-            {/* <li>
-              <a
-                href="/services"
-                onClick={closeMenu}
-                className="block py-3 text-gray-800 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium"
-              >
-                Services
-              </a>
-            </li> */}
             <li>
-              <a
+              <Link
                 href="/services"
                 onClick={closeMenu}
                 className="block py-3 text-gray-800 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors font-medium"
               >
                 What We Do
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="/contact-us"
                 onClick={closeMenu}
                 className="block py-3 text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
               >
                 Contacts
-              </a>
+              </Link>
             </li>
 
             {/* CTA Button */}
