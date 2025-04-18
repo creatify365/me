@@ -4,8 +4,6 @@ import {
   PhoneIcon,
   MailIcon,
   MapPinIcon,
-  SendIcon,
-  ClockIcon,
   TwitterIcon,
   Linkedin,
   InstagramIcon,
@@ -108,8 +106,8 @@ export default function ContactPage() {
               variant="outline"
               className="w-full gap-2"
             >
-              <a href="tel:+1234567890">
-                <PhoneIcon className="h-5 w-5" /> +1 (234) 567-890
+              <a href="tel:+256759311117">
+                <PhoneIcon className="h-5 w-5" /> + 256 759311117
               </a>
             </Button>
 
@@ -119,8 +117,8 @@ export default function ContactPage() {
               variant="outline"
               className="w-full gap-2"
             >
-              <a href="mailto:hello@example.com">
-                <MailIcon className="h-5 w-5" /> hello@example.com
+              <a href="mailto:creatify365@gmail.com">
+                <MailIcon className="h-5 w-5" /> creatify365@egmail.com
               </a>
             </Button>
 
