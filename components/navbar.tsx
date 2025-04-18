@@ -10,12 +10,16 @@ import {
   GithubIcon,
 } from "lucide-react";
 export default function NavBar() {
-  const sideMenuRef = useRef(null);
+  const sideMenuRef = useRef<HTMLUListElement | null>(null);
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(-16rem)";
+    }
   };
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(16rem)";
+    }
   };
   return (
     <>
